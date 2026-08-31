@@ -24,7 +24,7 @@
 
     <!-- BANNER DE URGENCIA (Móvil First) -->
     <div class="bg-gradient-to-r from-blue-700 via-brandBlue to-indigo-600 text-white py-2 px-3 text-center text-xs font-bold tracking-wide shadow-md">
-        🔥 PILOTO EXCLUSIVO: Solo <span class="bg-black/30 px-1.5 py-0.5 rounded text-yellow-300">100 Pedidos</span> disponibles para prueba
+        🔥 OFERTA PILOTO: Solo <span class="bg-black/30 px-1.5 py-0.5 rounded text-yellow-300">100 Pedidos</span> disponibles para prueba
     </div>
 
     <!-- MAIN CONTAINER -->
@@ -40,19 +40,19 @@
             </span>
         </div>
 
-        <!-- TARJETA DE OFERTA BOMBA (Móvil Top) -->
+        <!-- TARJETA DE OFERTA PILOTO -->
         <section class="bg-gradient-to-b from-blue-950/60 to-gray-900 border-2 border-brandBlue/60 rounded-2xl p-4 shadow-xl shadow-blue-950/40 relative overflow-hidden">
             <div class="absolute -right-6 -top-6 bg-brandBlue/10 w-24 h-24 rounded-full blur-xl pointer-events-none"></div>
             
             <p class="text-[11px] font-bold text-brandBlue uppercase tracking-wider mb-2 flex items-center gap-1">
-                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Propuesta Especial Piloto
+                <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Oferta Piloto
             </p>
 
             <!-- STATS DE IMPACTO -->
             <div class="grid grid-cols-3 gap-2 text-center py-2 bg-gray-950/80 rounded-xl border border-gray-800/80 mb-3">
                 <div class="p-1">
                     <span class="block text-xl md:text-2xl font-black text-emerald-400">14 DÍAS</span>
-                    <span class="text-[10px] text-gray-400 font-medium">PRUEBA GRATIS</span>
+                    <span class="text-[10px] text-gray-400 font-medium">DE PRUEBA</span>
                 </div>
                 <div class="p-1 border-x border-gray-800">
                     <span class="block text-xl md:text-2xl font-black text-white">$2.400</span>
@@ -75,7 +75,7 @@
                 <h2 class="text-lg font-bold text-white flex items-center gap-2">
                     <i data-lucide="zap" class="w-5 h-5 text-brandGold"></i> Asegura tus 100 Envíos a $2.400
                 </h2>
-                <p class="text-xs text-gray-400">Te contactamos de inmediato por WhatsApp para activar tu cuenta.</p>
+                <p class="text-xs text-gray-400">Inicia oferta piloto completando tus datos de contacto.</p>
             </div>
             
             <form id="prospectForm" class="space-y-3">
@@ -114,7 +114,7 @@
                 </div>
 
                 <button type="submit" class="w-full bg-gradient-to-r from-brandBlue to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-black py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 active:scale-[0.98]">
-                    <i data-lucide="send" class="w-4 h-4"></i> ACTIVAR MI PRUEBA GRATIS
+                    <i data-lucide="send" class="w-4 h-4"></i> ACTIVAR MI OFERTA PILOTO
                 </button>
             </form>
         </section>
@@ -148,7 +148,7 @@
             const plataforma = document.getElementById('plataforma').value;
             const envios = document.getElementById('envios').value;
 
-            const mensaje = `Hola CargaFlex, quiero solicitar la oferta del Programa Piloto (14 días gratis / $2.400 el paquete):%0A%0A` +
+            const mensaje = `Hola CargaFlex, quiero inicia oferta piloto (14 días de prueba / $2.400 el paquete):%0A%0A` +
                             `• *Tienda/Cliente:* ${nombre}%0A` +
                             `• *WhatsApp:* ${telefono}%0A` +
                             `• *Plataforma:* ${plataforma}%0A` +
