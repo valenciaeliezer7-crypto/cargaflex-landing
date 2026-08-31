@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CargaFlex - Tu Mejor Aliado Logístico</title>
-    <!-- Tailwind CSS desde CDN -->
+    <title>CargaFlex - Tu Aliado Logístico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -18,150 +17,137 @@
             }
         }
     </script>
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-gray-950 text-white font-sans antialiased">
 
-    <!-- HERO SECTION -->
-    <header class="bg-brandDark text-white py-16 px-6 md:px-12 text-center border-b border-gray-800">
-        <div class="max-w-4xl mx-auto">
-            <span class="text-brandBlue font-semibold text-sm tracking-widest uppercase bg-blue-950/80 px-4 py-1.5 rounded-full border border-blue-800/50 inline-block mb-4">
-                Programa Piloto 2026
-            </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">CARGAFLEX</h1>
-            <p class="text-xl md:text-2xl font-light text-gray-300 mb-2">TU MEJOR ALIADO LOGÍSTICO</p>
-            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">Tú vendes. Nosotros entregamos. Simplificamos la logística de tu e-commerce para que ahorres tiempo y te enfoques en escalar.</p>
+    <!-- HERO & FORMULARIO DE PROSPECCIÓN (Todo en la primera pantalla) -->
+    <header class="py-10 px-4 md:px-10 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
             
-            <a href="#piloto" class="inline-flex items-center gap-2 bg-brandBlue hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition duration-200 text-lg">
-                ¡Quiero Probar CargaFlex!
-                <i data-lucide="arrow-right"></i>
-            </a>
+            <!-- Texto Principal -->
+            <div class="md:col-span-7 space-y-4">
+                <span class="text-brandBlue font-semibold text-xs tracking-widest uppercase bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800/50 inline-block">
+                    Programa Piloto 2026 • Santiago & RM
+                </span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white">
+                    CARGAFLEX
+                </h1>
+                <p class="text-xl font-bold text-brandBlue">Tú vendes. Nosotros entregamos.</p>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+                    Simplificamos la logística de tu e-commerce. Retiramos tus paquetes, nos encargamos del despacho y realizamos entregas de última milla rápidas y seguras.
+                </p>
+                
+                <!-- Beneficios en Pills -->
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300 flex items-center gap-1.5">
+                        <i data-lucide="check" class="w-4 h-4 text-brandBlue"></i> Sin contratos forzosos
+                    </span>
+                    <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300 flex items-center gap-1.5">
+                        <i data-lucide="check" class="w-4 h-4 text-brandBlue"></i> Integración E-Commerce
+                    </span>
+                    <span class="bg-gray-900 border border-gray-800 text-xs px-3 py-1.5 rounded-lg text-gray-300 flex items-center gap-1.5">
+                        <i data-lucide="check" class="w-4 h-4 text-brandBlue"></i> Prueba de 14 días
+                    </span>
+                </div>
+            </div>
+
+            <!-- Formulario de Captura / Prospección -->
+            <div class="md:col-span-5 bg-gray-900 border border-gray-800 p-6 rounded-2xl shadow-2xl">
+                <h2 class="text-xl font-bold text-white mb-1">Aplica al Programa Piloto</h2>
+                <p class="text-xs text-gray-400 mb-4">Completa el formulario para evaluar la cobertura de tu tienda.</p>
+                
+                <form id="prospectForm" class="space-y-3">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Nombre o Tienda *</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Noltex Store" class="w-full bg-gray-950 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brandBlue">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">WhatsApp de contacto *</label>
+                        <input type="tel" id="telefono" required placeholder="+56 9 1234 5678" class="w-full bg-gray-950 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brandBlue">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Plataforma que usas *</label>
+                        <select id="plataforma" class="w-full bg-gray-950 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brandBlue">
+                            <option value="Mercado Libre">Mercado Libre</option>
+                            <option value="Shopify">Shopify</option>
+                            <option value="WooCommerce">WooCommerce</option>
+                            <option value="Jumpseller">Jumpseller</option>
+                            <option value="Falabella">Falabella</option>
+                            <option value="Otra">Otra / Venta Directa</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Promedio de envíos diarios *</label>
+                        <select id="envios" class="w-full bg-gray-950 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brandBlue">
+                            <option value="1 a 10 envíos/día">1 a 10 envíos/día</option>
+                            <option value="10 a 30 envíos/día">10 a 30 envíos/día</option>
+                            <option value="30 a 100 envíos/día">30 a 100 envíos/día</option>
+                            <option value="Más de 100 envíos/día">+100 envíos/día</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brandBlue hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition text-sm flex items-center justify-center gap-2 mt-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Solicitar Evaluación Gratis
+                    </button>
+                </form>
+            </div>
+
         </div>
     </header>
 
-    <!-- EL PROBLEMA VS LA SOLUCIÓN -->
-    <section class="py-16 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-red-100">
-            <div class="flex items-center gap-3 text-red-500 mb-4">
-                <i data-lucide="alert-circle" class="w-7 h-7"></i>
-                <h2 class="text-xl font-bold text-gray-900">EL PROBLEMA</h2>
-            </div>
-            <p class="text-gray-600 leading-relaxed">
-                Vender online no termina cuando el cliente compra. Gestionar retiros, preparar despachos, coordinar entregas y hacer seguimiento consume tiempo vital. Mientras más vendes, más compleja y costosa se vuelve tu operación.
-            </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-blue-100">
-            <div class="flex items-center gap-3 text-brandBlue mb-4">
-                <i data-lucide="check-circle" class="w-7 h-7"></i>
-                <h2 class="text-xl font-bold text-gray-900">LA SOLUCIÓN</h2>
-            </div>
-            <p class="text-gray-600 leading-relaxed">
-                CargaFlex simplifica la logística de tu e-commerce. Retiramos tus pedidos, los gestionamos y realizamos la entrega de última milla a tu cliente final. Ahorra tiempo operativo y escala sin construir tu propia logística.
-            </p>
-        </div>
-    </section>
-
-    <!-- ¿CÓMO FUNCIONA? -->
-    <section class="py-16 bg-white border-y border-gray-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">¿CÓMO FUNCIONA?</h2>
-                <p class="text-gray-500 mt-2">Cobertura estratégica en Santiago & Comunas de la RM</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
-                <!-- PASO 1 -->
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <span class="text-3xl font-black text-brandBlue opacity-40">01</span>
-                    <h3 class="font-bold text-lg mt-2 mb-1">CONECTA</h3>
-                    <p class="text-sm text-gray-600">Integramos tu operación y recibimos tus pedidos en tiempo real.</p>
+    <!-- ¿CÓMO FUNCIONA? (Ultra Compacto) -->
+    <section class="py-8 bg-gray-900/50 border-y border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-center text-xs font-bold text-gray-400 uppercase tracking-wider mb-6">Operación en 4 Pasos Simples</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+                    <span class="text-brandBlue font-bold text-lg">1. Conectas</span>
+                    <p class="text-xs text-gray-400 mt-1">Recibimos las órdenes de tu tienda.</p>
                 </div>
-
-                <!-- PASO 2 -->
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <span class="text-3xl font-black text-brandBlue opacity-40">02</span>
-                    <h3 class="font-bold text-lg mt-2 mb-1">RETIRAMOS</h3>
-                    <p class="text-sm text-gray-600">Coordinamos el retiro directo en tu punto de operación.</p>
+                <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+                    <span class="text-brandBlue font-bold text-lg">2. Retiramos</span>
+                    <p class="text-xs text-gray-400 mt-1">Buscamos los paquetes en tu dirección.</p>
                 </div>
-
-                <!-- PASO 3 -->
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <span class="text-3xl font-black text-brandBlue opacity-40">03</span>
-                    <h3 class="font-bold text-lg mt-2 mb-1">GESTIONAMOS</h3>
-                    <p class="text-sm text-gray-600">Organizamos y monitoreamos la carga durante el despacho.</p>
+                <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+                    <span class="text-brandBlue font-bold text-lg">3. Entregamos</span>
+                    <p class="text-xs text-gray-400 mt-1">Despacho eficiente al cliente final.</p>
                 </div>
-
-                <!-- PASO 4 -->
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <span class="text-3xl font-black text-brandBlue opacity-40">04</span>
-                    <h3 class="font-bold text-lg mt-2 mb-1">ENTREGAMOS</h3>
-                    <p class="text-sm text-gray-600">Servicio de última milla rápido y seguro hasta tu cliente.</p>
-                </div>
-
-                <!-- PASO 5 -->
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                    <span class="text-3xl font-black text-brandBlue opacity-40">05</span>
-                    <h3 class="font-bold text-lg mt-2 mb-1">MONITOREA</h3>
-                    <p class="text-sm text-gray-600">Control total y estado del envío actualizado en todo momento.</p>
+                <div class="bg-gray-900 p-4 rounded-xl border border-gray-800">
+                    <span class="text-brandBlue font-bold text-lg">4. Monitoreas</span>
+                    <p class="text-xs text-gray-400 mt-1">Estado de entregas en tiempo real.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- INTEGRACIONES -->
-    <section class="py-12 bg-gray-50 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-6">Integraciones E-Commerce Soportadas</h3>
-            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 font-bold text-gray-600 text-lg">
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">Mercado Libre</span>
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">Shopify</span>
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">WooCommerce</span>
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">Jumpseller</span>
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">Falabella</span>
-                <span class="bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">Tiendanube</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROGRAMA PILOTO (CTA & FORM) -->
-    <section id="piloto" class="py-16 bg-brandDark text-white px-6">
-        <div class="max-w-3xl mx-auto bg-gray-900 p-8 md:p-12 rounded-2xl border border-gray-800 shadow-2xl text-center">
-            <h2 class="text-3xl font-extrabold mb-4">ÚNETE AL PROGRAMA PILOTO CARGAFLEX</h2>
-            <p class="text-gray-300 mb-8">Estamos seleccionando a los primeros sellers para probar nuestra operación logística con beneficios exclusivos.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 text-left">
-                <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/50 flex items-center gap-3">
-                    <i data-lucide="package" class="text-brandBlue"></i>
-                    <span class="text-sm font-semibold">Hasta 100 pedidos</span>
-                </div>
-                <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/50 flex items-center gap-3">
-                    <i data-lucide="calendar" class="text-brandBlue"></i>
-                    <span class="text-sm font-semibold">14 días de prueba</span>
-                </div>
-                <div class="bg-gray-800/60 p-4 rounded-xl border border-gray-700/50 flex items-center gap-3">
-                    <i data-lucide="percent" class="text-brandBlue"></i>
-                    <span class="text-sm font-semibold">Tarifas preferenciales</span>
-                </div>
-            </div>
-
-            <a href="https://wa.me/56920871084?text=Hola,%20quiero%20probar%20el%20programa%20piloto%20de%20CargaFlex" 
-               target="_blank"
-               class="inline-flex items-center justify-center gap-3 w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-xl transition duration-200 text-lg shadow-lg">
-                <i data-lucide="message-square"></i>
-                Solicitar Piloto por WhatsApp
-            </a>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gray-950 text-gray-500 py-8 text-center text-sm border-t border-gray-900">
-        <p>CargaFlex 2026 - Tú vendes, nosotros entregamos. Todos los derechos reservados.</p>
+    <footer class="py-6 text-center text-xs text-gray-500">
+        <p>CargaFlex 2026 — Logística Inteligente para E-Commerce</p>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        // Enviar datos del formulario directamente a WhatsApp
+        document.getElementById('prospectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const plataforma = document.getElementById('plataforma').value;
+            const envios = document.getElementById('envios').value;
+
+            const mensaje = `Hola CargaFlex, quiero postular al Programa Piloto:%0A%0A` +
+                            `• *Tienda/Nombre:* ${nombre}%0A` +
+                            `• *Teléfono:* ${telefono}%0A` +
+                            `• *Plataforma:* ${plataforma}%0A` +
+                            `• *Volumen diario:* ${envios}`;
+
+            window.open(`https://wa.me/56920871084?text=${mensaje}`, '_blank');
+        });
     </script>
 </body>
 </html>
